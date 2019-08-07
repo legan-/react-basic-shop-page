@@ -4,11 +4,17 @@ import thunk from 'redux-thunk';
 
 import reducer from './reducers/';
 
+import {
+  fetchData
+} from './actions';
+
 export default () => {
   const store = createStore(
     reducer,
     composeWithDevTools(applyMiddleware(thunk))
   );
+
+  store.dispatch(fetchData());
 
   return store;
 };

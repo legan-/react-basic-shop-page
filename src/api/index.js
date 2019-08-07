@@ -5,7 +5,6 @@ const getData = url => {
 
   const options = {
     method: 'GET',
-    mode: 'no-cors',
     headers
   };
 

@@ -1,3 +1,7 @@
 export default {
-  key: ''
+  data: {
+    byId: {},
+    isLoading: false,
+    isReceived: false
+  }
 };
