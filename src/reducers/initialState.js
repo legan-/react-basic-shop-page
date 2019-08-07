@@ -3,5 +3,7 @@ export default {
     byId: {},
     isLoading: false,
     isReceived: false
-  }
+  },
+  likedItemIds: [],
+  soldItemsDisplayed: false
 };
