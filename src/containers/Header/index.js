@@ -4,14 +4,12 @@ import {
   Wrapper,
 } from './components';
 
-import { name } from '~/config';
-
-function Content() {
+function Header() {
   return (
     <Wrapper>
-      { name }
+      Header
     </Wrapper>
   );
 }
 
-export default Content;
+export default Header;

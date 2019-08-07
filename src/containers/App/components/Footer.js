@@ -8,7 +8,7 @@ Footer.propTypes = {
 
 function Footer({ year, name }) {
   return (
-    <footer className='footer container'>
+    <footer className='container'>
       { `© ${ year } - ${ name }` }
     </footer>
   );

@@ -6,7 +6,10 @@ import {
   Wrapper,
 } from './components';
 
-import Content from '../Content';
+import {
+  Content,
+  Header,
+} from '../index';
 
 import { date } from '~/src/helpers';
 import { name } from '~/config';
@@ -14,6 +17,7 @@ import { name } from '~/config';
 function App() {
   return (
     <Wrapper>
+      <Header />
       <Content />
       <Footer
         year={ date().year }
