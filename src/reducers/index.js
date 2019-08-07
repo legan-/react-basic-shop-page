@@ -5,7 +5,7 @@ import initialState from './initialState';
 
 import data from './data';
 
-const likedItemIds = (state = initialState.likedItemIds, action) => {
+const likedItemIds = (state = [...initialState.likedItemIds], action) => {
   switch (action.type) {
     default:
       return state;
