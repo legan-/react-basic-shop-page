@@ -22,6 +22,7 @@ import {
 
 Grid.propTypes = {
   items: TYPES.array.isRequired,
+  likedIds: TYPES.arrayOf(TYPES.string).isRequired,
   soldItemsDisplayed: TYPES.bool.isRequired,
   toggleSoldItems: TYPES.func.isRequired,
   likeButtonClickHandler: TYPES.func.isRequired,
@@ -29,6 +30,7 @@ Grid.propTypes = {
 
 function Grid({
   items,
+  likedIds,
   soldItemsDisplayed,
   toggleSoldItems,
   likeButtonClickHandler,
@@ -49,6 +51,7 @@ function Grid({
           <Item
             key={ id }
             { ...otherProps }
+            liked={ likedIds.includes(id) }
             onLikeButtonClick={ () => likeButtonClickHandler(id) }
           />
         ))
@@ -59,6 +62,7 @@ function Grid({
 
 const mapStateToProps = state => ({
   items: itemsSelector(state),
+  likedIds: state.likedItems.ids,
   soldItemsDisplayed: state.soldItemsDisplayed,
 });
 
