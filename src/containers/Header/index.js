@@ -40,7 +40,7 @@ function Header({
         onClick={ toggleLikedItemsList }
       />
       <List
-        isActive={ isListActive }
+        isActive={ isListActive && likedItems.length > 0 }
       >
         {
           likedItems.map(({ id, title }) => (

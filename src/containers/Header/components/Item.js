@@ -1,6 +1,12 @@
 import React, { memo } from 'react';
 import * as TYPES from 'prop-types';
 
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import IconButton from '@material-ui/core/IconButton';
+import ClearIcon from '@material-ui/icons/Clear';
+
 Item.propTypes = {
   title: TYPES.string.isRequired,
   onRemoveButtonClick: TYPES.func.isRequired,
@@ -23,9 +29,14 @@ function Item({
   onRemoveButtonClick,
 }) {
   return (
-    <div onClick={ onRemoveButtonClick }>
-      { title }
-    </div>
+    <ListItem>
+      <ListItemText primary={ title } />
+      <ListItemSecondaryAction>
+        <IconButton>
+          <ClearIcon onClick={ onRemoveButtonClick } />
+        </IconButton>
+      </ListItemSecondaryAction>
+    </ListItem>
   );
 }
 

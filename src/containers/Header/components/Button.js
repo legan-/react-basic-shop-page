@@ -1,6 +1,9 @@
 import React, { memo } from 'react';
 import * as TYPES from 'prop-types';
 
+import MaterialUIButton from '@material-ui/core/Button';
+import ThumbUpOutlinedIcon from '@material-ui/icons/ThumbUpOutlined';
+
 Button.propTypes = {
   quantity: TYPES.number.isRequired,
   isActive: TYPES.bool.isRequired,
@@ -27,12 +30,18 @@ function Button({
   onClick,
 }) {
   return (
-    <button
+    <MaterialUIButton
+      variant='outlined'
+      size='small'
+      color={ isActive ? 'primary' : 'default' }
+      className={ 'toggle-liked-list-button' }
       onClick={ onClick }
     >
-      { isActive ? '+' : '-' }
-      { quantity }
-    </button>
+      <ThumbUpOutlinedIcon className='toggle-liked-list-button-icon' />
+      <span className='toggle-liked-list-button-quantity'>
+        { quantity }
+      </span>
+    </MaterialUIButton>
   );
 }
 

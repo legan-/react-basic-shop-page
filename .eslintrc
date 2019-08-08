@@ -41,7 +41,6 @@
 
     "react/prop-types": 1,
     "react/destructuring-assignment": [1, "always"],
-    "react/forbid-component-props": 2,
     "react/no-access-state-in-setstate": 2,
     "react/no-children-prop": 2,
     "react/no-danger": 2,
