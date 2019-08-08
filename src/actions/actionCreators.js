@@ -14,3 +14,10 @@ export const dataReceivedSuccess = data => ({
 export const dataReceivedFail = () => ({
   type: TYPES.DATA_RECEIVED_FAIL
 });
+
+export const updateLikedItemIds = ids => ({
+  type: TYPES.UPDATE_LIKED_ITEM_IDS,
+  payload: {
+    ids
+  }
+});

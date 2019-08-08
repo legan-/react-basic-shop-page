@@ -13,7 +13,7 @@ export default receivedData => {
         store[id] = {
           id: id.toString(),
           title,
-          brand,
+          brand: brand || 'n/a',
           size,
           price,
           img,

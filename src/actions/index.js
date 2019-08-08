@@ -19,3 +19,17 @@ export const fetchData = () => dispatch => {
       dispatch(actions.dataReceivedFail());
     });
 };
+
+export const likeButtonClickHandler = id => (dispatch, getState) => {
+  const { likedItemIds: modifiedLikedItemIds } = getState();
+
+  const index = modifiedLikedItemIds.indexOf(id);
+
+  if (index < 0) {
+    modifiedLikedItemIds.push(id);
+  } else {
+    modifiedLikedItemIds.splice(index, 1);
+  }
+
+  dispatch(actions.updateLikedItemIds(modifiedLikedItemIds));
+};
