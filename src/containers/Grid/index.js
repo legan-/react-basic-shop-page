@@ -9,11 +9,11 @@ import {
 } from './components';
 
 import {
-  likeButtonClickHandler
+  likeButtonClickHandler,
 } from '~/src/actions';
 
 import {
-  itemsSelector
+  itemsSelector,
 } from './selectors';
 
 Grid.propTypes = {
@@ -23,7 +23,7 @@ Grid.propTypes = {
 
 function Grid({
   items,
-  likeButtonClickHandler
+  likeButtonClickHandler,
 }) {
   return (
     <Wrapper>
@@ -46,7 +46,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   ...bindActionCreators({
-    likeButtonClickHandler
+    likeButtonClickHandler,
   }, dispatch),
 });
 

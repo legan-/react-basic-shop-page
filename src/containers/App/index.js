@@ -10,7 +10,7 @@ import {
 import {
   Header,
   Grid,
-  TitleBar
+  TitleBar,
 } from '../index';
 
 import { date } from '~/src/helpers';

@@ -10,17 +10,17 @@ import {
 } from './components';
 
 import { 
-  toggleSoldItems
+  toggleSoldItems,
 } from '~/src/actions';
 
 import {
-  itemsSizeSelector
+  itemsSizeSelector,
 } from './selectors';
 
 TitleBar.propTypes = {
   itemsSize: TYPES.number.isRequired,
   soldItemsDisplayed: TYPES.bool.isRequired,
-  toggleSoldItems: TYPES.func.isRequired
+  toggleSoldItems: TYPES.func.isRequired,
 };
 
 function TitleBar({
@@ -48,7 +48,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   ...bindActionCreators({
-    toggleSoldItems
+    toggleSoldItems,
   }, dispatch),
 });
 

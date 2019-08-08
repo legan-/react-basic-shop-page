@@ -4,6 +4,9 @@ export default {
     isLoading: false,
     isReceived: false
   },
-  likedItemIds: [],
+  likedItems: {
+    ids: [],
+    isListActive: false
+  },
   soldItemsDisplayed: false
 };

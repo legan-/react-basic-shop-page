@@ -6,7 +6,7 @@ Title.propTypes = {
 };
 
 function Title({
-  quantity
+  quantity,
 }) {
   return (
     <div

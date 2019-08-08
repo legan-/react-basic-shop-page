@@ -21,19 +21,28 @@ export const fetchData = () => dispatch => {
 };
 
 export const likeButtonClickHandler = id => (dispatch, getState) => {
-  const { likedItemIds: modifiedLikedItemIds } = getState();
+  const { 
+    likedItems: {
+      ids: likedIds
+    }
+  } = getState();
 
-  const index = modifiedLikedItemIds.indexOf(id);
+  const index = likedIds.indexOf(id);
 
   if (index < 0) {
-    modifiedLikedItemIds.push(id);
+    likedIds.push(id);
   } else {
-    modifiedLikedItemIds.splice(index, 1);
+    likedIds.splice(index, 1);
   }
+  
 
-  dispatch(actions.updateLikedItemIds(modifiedLikedItemIds));
+  dispatch(actions.updateLikedItemIds(likedIds));
 };
 
 export const toggleSoldItems = () => dispatch => {
   dispatch(actions.toggleSoldItems());
+};
+
+export const toggleLikedItemsList = () => dispatch => {
+  dispatch(actions.toggleLikedItemsList());
 };
