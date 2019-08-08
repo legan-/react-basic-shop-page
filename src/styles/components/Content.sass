@@ -1,6 +1,7 @@
 .content
   height: 100%
-  padding: $indent 0
+  padding-top: $indent
+  padding-bottom: $indent
 
   &.wrapper
     height: 100%
@@ -12,9 +13,35 @@
   .title-bar
     display: flex
     justify-content: space-between
+    margin-bottom: $indent
     width: 100%
 
     .title-bar-title
       justify-self: start
 
+  .items
+    .item-image
+      position: relative
+
+      .item-like-button
+        position: absolute
+        top: $indent/2
+        right: $indent/2
+        min-width: auto
+        z-index: 1
+
+      .item-sold
+        display: flex
+        color: #EEE
+        font-size: 22px
+        font-weight: 700
+        text-transform: uppercase
+        background-color: rgba(0, 0, 0, .7)
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        justify-content: center
+        align-items: center
     

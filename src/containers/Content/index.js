@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import {
   Button,
   Item,
+  Items,
   Title,
   TitleBar,
   Wrapper,
@@ -46,16 +47,18 @@ function Grid({
           onClick={ toggleSoldItems }
         />
       </TitleBar>
-      {
-        items.map(({ id, ...otherProps }) => (
-          <Item
-            key={ id }
-            { ...otherProps }
-            liked={ likedIds.includes(id) }
-            onLikeButtonClick={ () => likeButtonClickHandler(id) }
-          />
-        ))
-      }
+      <Items>
+        {
+          items.map(({ id, ...otherProps }) => (
+            <Item
+              key={ id }
+              { ...otherProps }
+              liked={ likedIds.includes(id) }
+              onLikeButtonClick={ () => likeButtonClickHandler(id) }
+            />
+          ))
+        }
+      </Items>
     </Wrapper>
   );
 }
