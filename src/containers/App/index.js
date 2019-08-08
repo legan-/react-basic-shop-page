@@ -2,15 +2,13 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 
 import {
-  Content,
   Footer,
   Wrapper,
 } from './components';
 
 import {
   Header,
-  Grid,
-  TitleBar,
+  Content,
 } from '../index';
 
 import { date } from '~/src/helpers';
@@ -20,10 +18,7 @@ function App() {
   return (
     <Wrapper>
       <Header />
-      <Content>
-        <TitleBar />
-        <Grid />
-      </Content>
+      <Content />
       <Footer
         year={ date().year }
         name={ name }

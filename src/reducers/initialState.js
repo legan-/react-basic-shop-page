@@ -8,5 +8,5 @@ export default {
     ids: [],
     isListActive: false
   },
-  soldItemsDisplayed: false
+  soldItemsDisplayed: true
 };
