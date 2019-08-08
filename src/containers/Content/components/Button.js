@@ -1,6 +1,8 @@
 import React, { memo } from 'react';
 import * as TYPES from 'prop-types';
 
+import ButtonMaterialUI from '@material-ui/core/Button';
+
 Button.propTypes = {
   soldItemsDisplayed: TYPES.bool.isRequired,
   onClick: TYPES.func.isRequired
@@ -22,15 +24,17 @@ function Button({
   soldItemsDisplayed,
   onClick,
 }) {
-  const title = soldItemsDisplayed ? 'Show All Items' : 'Hide Sold Items';
+  const title = soldItemsDisplayed ? 'Hide Sold Items' : 'Show All Items';
 
   return (
-    <button
-      className='title-bar-button'
+    <ButtonMaterialUI
+      size='small'
+      variant='contained'
       onClick={ onClick }
+      className='title-bar-button'
     >
       { title }
-    </button>
+    </ButtonMaterialUI>
   );
 }
 

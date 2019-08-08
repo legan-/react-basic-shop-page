@@ -1,6 +1,8 @@
 import React from 'react';
 import * as TYPES from 'prop-types';
 
+import Typography from '@material-ui/core/Typography';
+
 Title.propTypes = {
   quantity: TYPES.number.isRequired,
 };
@@ -9,11 +11,12 @@ function Title({
   quantity,
 }) {
   return (
-    <div
+    <Typography
+      variant='h4'
       className='title-bar-title'
     >
       { `${ quantity } result${ quantity > 1 ? 's' : '' }` }
-    </div>
+    </Typography>
   );
 }
 
