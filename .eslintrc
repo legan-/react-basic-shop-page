@@ -40,7 +40,6 @@
     "template-curly-spacing": [2, "always"],
 
     "react/prop-types": 1,
-    "react/boolean-prop-naming": [2, { "rule": "^(is|has|with)[A-Z]([A-Za-z0-9]?)+", "message": "It is better if your prop \"{{ propName }}\" matches this pattern: {{ pattern }}" }],
     "react/destructuring-assignment": [1, "always"],
     "react/forbid-component-props": 2,
     "react/no-access-state-in-setstate": 2,

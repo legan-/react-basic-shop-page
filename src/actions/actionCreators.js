@@ -21,3 +21,7 @@ export const updateLikedItemIds = ids => ({
     ids
   }
 });
+
+export const toggleSoldItems = () => ({
+  type: TYPES.TOGGLE_SOLD_ITEMS
+});

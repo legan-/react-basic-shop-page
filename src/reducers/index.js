@@ -16,6 +16,8 @@ const likedItemIds = (state = [...initialState.likedItemIds], action) => {
 
 const soldItemsDisplayed = (state = initialState.soldItemsDisplayed, action) => {
   switch (action.type) {
+    case TYPES.TOGGLE_SOLD_ITEMS:
+      return !state;
     default:
       return state;
   }

@@ -33,3 +33,7 @@ export const likeButtonClickHandler = id => (dispatch, getState) => {
 
   dispatch(actions.updateLikedItemIds(modifiedLikedItemIds));
 };
+
+export const toggleSoldItems = () => dispatch => {
+  dispatch(actions.toggleSoldItems());
+};
